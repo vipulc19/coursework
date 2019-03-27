@@ -1,5 +1,5 @@
 import java.util.*;
-public class Pred_Parser
+public class Pred_Parsern 
 {
 	static String M[][] = { {"TZ",null,null,null},
 							{null,"+TZ",null,"e"},
@@ -51,10 +51,12 @@ public class Pred_Parser
 		{
 			c = isTerminal(s.charAt(i));
 			System.out.print(printS()+"\t"+s.substring(i));
+			if(c==-1)
+				break;
 			//System.out.println(r+"**"+c);
 			if(c!=-1 && i<s.length()) //If terminal do exists.
 			{
-				
+
 				if(s.charAt(i)==st.peek())
 				{
 					i++;
